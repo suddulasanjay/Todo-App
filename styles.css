@@ -1,0 +1,244 @@
+body {
+  font-family: "TaHoma", "Palatino", "Courier", "Red Hat Display", "Arvo",
+    "Roboto", "Average";
+}
+input[type="checkbox"] {
+  width: 1.25em;
+  height: 1.25em;
+  margin-bottom: 0;
+  line-height: 1.2rem;
+  display: inline-block;
+  background: "inherit";
+  border: 2px solid black;
+}
+.InputTaskDiv {
+  background-color: white;
+  width: 60%;
+  border-radius: 1em;
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  z-index: 1;
+  padding: 1.5em;
+}
+.inputHeaderDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#inputTitleText {
+  width: 98%;
+  height: 2em;
+}
+.inputAddButton {
+  background-color: #373633;
+  color: whitesmoke;
+  font-weight: bold;
+  padding: 0.8em;
+  width: 12%;
+  border-radius: 1em;
+}
+.inputCancelButton {
+  background-color: white;
+  color: #373633;
+  font-weight: bold;
+  opacity: 0.8;
+  border-width: 0;
+  outline: none;
+}
+#inputDescriptionText {
+  width: 98%;
+  min-height: 5em;
+  resize: none;
+}
+.inputOptionsSpan {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.25em;
+  padding: 0.35em;
+  border-radius: 0.5em;
+}
+#root {
+  color: #373633;
+  border: 2px solid #69665c;
+  border-radius: 1em;
+  font-family: "TaHoma", "Palatino", "Courier", "Red Hat Display", "Arvo",
+    "Roboto", "Average";
+  padding: 2.5em;
+  position: relative;
+}
+.title {
+  /* position: fixed; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.title > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.topbutton {
+  padding: 2em;
+}
+.topbutton > span {
+  font-weight: bold;
+  transform: scale(1.75);
+}
+.topbutton > span:hover {
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tagIcon {
+  height: 1.5em;
+  width: 1.5em;
+  border-radius: 50%;
+  display: inline-block;
+}
+.inputTagsWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+.options {
+  /* position: fixed; */
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.optionsUl {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0;
+}
+.optionsLi {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  border-radius: 0.5em;
+  padding: 3px 0;
+  margin-left: 0;
+  font-size: 1.25rem;
+}
+#optionsCheckBox {
+  appearance: none;
+  border: none;
+  width: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+.optionsLi:hover,
+.editContentDivDeleteBtn:hover,
+.editContentDivEditBtn:hover,
+.inputCancelButton:hover,
+.inputAddButton:hover,
+.inputOptionsSpan:hover,
+#hideDone:hover,
+#contentDone:hover {
+  cursor: pointer;
+}
+
+.content {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+}
+.contentDiv {
+  padding: 1em;
+  max-width: 45%;
+  min-width: 45%;
+  background-color: #fff9de;
+  border-radius: 1em;
+  position: relative;
+}
+.contentTitleDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.contentTitleDiv > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contentTitleDiv > h1 {
+  display: inline-block;
+}
+.contentTitleButton > span:hover {
+  cursor: pointer;
+}
+.editContentDiv {
+  background-color: whitesmoke;
+  position: absolute;
+  width: 25%;
+  top: 4em;
+  left: 70%;
+  padding: 0.5em;
+}
+.contentFooter {
+  margin-top: 7%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#contentDone {
+  margin-bottom: -2%;
+}
+.tagsDiv {
+  display: flex;
+  flex-direction: row;
+}
+.hideDone {
+  display: none;
+}
+@media screen and (max-width: 920px) {
+  .main {
+    flex-direction: column;
+  }
+  .options {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  .optionsUl {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .optionsLi {
+    font-size: 1rem;
+  }
+  #hideDoneDiv {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 1em;
+  }
+  .content {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contentDiv {
+    min-width: 90%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .InputTaskDiv {
+    width: 80%;
+    top: 20%;
+    left: 10%;
+  }
+}
